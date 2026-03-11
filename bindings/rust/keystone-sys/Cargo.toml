@@ -21,7 +21,26 @@ bitflags = "1.0"
 libc = "0.2"
 
 [features]
-default = ["build_keystone_cmake"]
+default = ["build_keystone_cmake", "all_arches"]
 
 use_system_keystone = ["pkg-config"]
 build_keystone_cmake = ["cmake"]
+
+all_arches = [
+  "arch_arm",
+  "arch_arm64",
+  "arch_mips",
+  "arch_x86",
+  "arch_ppc",
+  "arch_sparc",
+  "arch_systemz",
+  "arch_hexagon",
+]
+arch_arm = []
+arch_arm64 = []
+arch_mips = []
+arch_x86 = []
+arch_ppc = []
+arch_sparc = []
+arch_systemz = []
+arch_hexagon = []
