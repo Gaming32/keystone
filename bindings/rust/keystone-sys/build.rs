@@ -25,7 +25,7 @@ fn build_with_cmake() {
         .define("CMAKE_INSTALL_LIBDIR", "lib")
         .define("BUILD_LIBS_ONLY", "1")
         .define("BUILD_SHARED_LIBS", "OFF")
-        .define("LLVM_TARGETS_TO_BUILD", "all")
+        .define("LLVM_TARGETS_TO_BUILD", "ARM;AArch64;Hexagon;Mips;PowerPC;Sparc;SystemZ;X86")
         // Prevent python from leaving behind `.pyc` files which break `cargo package`
         .env("PYTHONDONTWRITEBYTECODE", "1")
         .build();
